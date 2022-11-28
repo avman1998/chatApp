@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+.register {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(22, 24, 25);
+
+  .form-register {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: black;
+    padding: 30px 70px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    .name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        margin-bottom: -10px;
+        font-weight: bold;
+        color: gray;
+      }
+      .regis-head {
+        font-size: 90%;
+        color: gray;
+      }
+    }
+    input {
+      padding: 5px 10px;
+      border: none;
+      background-color: black;
+      color: white;
+      border-bottom: 1px solid gray;
+      &:focus {
+        outline: none;
+      }
+    }
+    .add-avatar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      img {
+        height: 40px;
+      }
+      p {
+        font-size: 70%;
+        color: gray;
+      }
+    }
+    .signUp-btn {
+      background-color: black;
+      font-size: 90%;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      color: gray;
+      border: 1px solid gray;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+    .have-account {
+      color: grey;
+      font-size: 90%;
+      span {
+        color: white;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 24, 25);
+  .home-container {
+    display: flex;
+    width: 65%;
+    height: 80%;
+    border: gray;
+    border-radius: 10px;
+    background-color: black;
+    overflow: hidden;
+    .sidebar {
+      flex: 1;
+
+      color: white;
+      background-color: grey;
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px;
+        background-color: #22262b;
+
+        .user {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          img {
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+            background-color: white;
+            object-fit: cover;
+          }
+          button {
+            background: grey;
+            color: white;
+            padding: 5px 7px;
+            border: none;
+            border-radius: 3px;
+            font-size: 80%;
+            cursor: pointer;
+          }
+        }
+      }
+      .search {
+        // padding: 10px;
+        border-bottom: 2px solid white;
+        .search-form {
+          padding: 10px;
+          input {
+            background-color: grey;
+            width: 100%;
+
+            color: white;
+            border: none;
+            outline: none;
+            &::placeholder {
+              color: white;
+            }
+          }
+        }
+        .userChat {
+          display: flex;
+          gap: 10px;
+          padding: 10px;
+          align-items: center;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(22, 24, 25);
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: white;
+          }
+          .user-info {
+            span {
+              // font-weight: bold;
+            }
+          }
+        }
+      }
+      .chats {
+        .userChat {
+          display: flex;
+          gap: 10px;
+          padding: 10px;
+          align-items: center;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(22, 24, 25);
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: white;
+          }
+          .user-info {
+            display: flex;
+            flex-direction: column;
+
+            span {
+              // font-weight: 500;
+              font-size: 18px;
+            }
+            p {
+              font-size: 14px;
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+    }
+    .chat {
+      flex: 2;
+      color: white;
+      .chatInfo {
+        background: gray;
+        color: black;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .messages {
+        background-color: darkgrey;
+        color: black;
+        padding: 10px;
+        height: calc(100% - 160px);
+        overflow-y: scroll;
+        .message {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 20px;
+
+          .messageInfo {
+            display: flex;
+            flex-direction: column;
+            color: #22262b;
+            font-weight: 300;
+            span {
+              font-size: 80%;
+            }
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+          .messageContent {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p {
+              padding: 10px;
+              background-color: white;
+              color: black;
+              border-radius: 0px 10px 10px 10px;
+              max-width: max-content;
+            }
+            img {
+              width: 50%;
+            }
+          }
+          &.owner {
+            flex-direction: row-reverse;
+            .messageContent {
+              align-items: flex-end;
+              p {
+                background-color: #22262b;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      .input {
+        background: white;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+        }
+        .send {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          img {
+            height: 24px;
+            cursor: pointer;
+          }
+          button {
+            padding: 10px;
+            color: white;
+            font-weight: normal;
+            border: none;
+            background-color: #22262b;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}
